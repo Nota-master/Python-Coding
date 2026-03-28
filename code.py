@@ -33,32 +33,14 @@ if age_input.isdigit():
 else:
     print("Invalid input. Please enter numbers only.")
 
-
-#Age limit to become camp leader
-# Camp Leader Age Checker
-def check_leader_eligibility():
-    try:
-        # Prompt user for age
-        print("Do you want to become camp leader?")
-        age = int(input("Enter your age: "))
-        
-        # Check eligibility
-        if 15 <= age <= 18:
-            print("Yes, you are old enough to become a camp leader!")
-        elif age < 15:
-            print("You are too young to be a leader, but can join as a camper.")
-        else:
-            print("You are too old to be a camper/leader, try our adult workshops.")
-            
-    except ValueError:
-        print("Please enter a valid numerical age.")
-
-# Run the function
-check_leader_eligibility()
+# do you want to be a camp leader?
+leader_choice = input("Do you want to be a camp leader? (yes or no): ")
+if leader_choice.lower() == "yes":
+    print("Great! You will be a camp leader.")
 
 #lists activities = ["cultural immersion", "kayaking and pancakes", "mountain biking"]
-meal = input("What meal do you want (standard, vegetarian, vegan):")
-print(f"You have chosen the {meal} meal.")
+meal =  input("What meal do you want standarad vegetraian or vegan? (standard, vegetarian, vegan): ")     
+print(f"You have chosen the meal: {meal}")  
 camp_number = [0,1,2]
 camp_choice = input("Enter camp number (0, 1, or 2): ")
 print(f"You have chosen camp {camp_choice}")
